@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>Edit {{book.title | titlecase}}</h2>
+
+<mat-dialog-content [formGroup]="formEdit">
+  <mat-form-field class="full-width">
+    <label for="author">Author</label>
+    <input id="author" matInput formControlName="author" required
+           class="form-control"
+           type="text">
+  </mat-form-field>
+
+  <div *ngIf="author.invalid" class="alert alert-danger full-width">
+    <div *ngIf="author.errors">
+      Author must be at least 4 characters long.
+    </div>
+  </div>
+
+
+  <mat-form-field class="full-width">
+    <label for="title">Title</label>
+    <input id="title" matInput formControlName="title" required
+           class="form-control"
+           type="text">
+  </mat-form-field>
+
+  <div *ngIf="title.invalid" class="alert alert-danger full-width">
+    <div *ngIf="title.errors">
+      Title must be at least 4 characters long.
+    </div>
+  </div>
+
+  <mat-form-field class="full-width">
+    <label for="date">Date</label>
+    <input id="date" matInput formControlName="date" required
+           class="form-control"
+           type="text">
+  </mat-form-field>
+
+  <div *ngIf="date.invalid" class="alert alert-danger full-width">
+    <div *ngIf="date.errors">
+      Date must be  YYYY-MM-DD format
+    </div>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button class="mat-raised-button"(click)="close()">Cancel</button>
+  <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions>
+

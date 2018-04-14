@@ -1,0 +1,60 @@
+table, .one {
+  color: #0C7BFE;
+}
+thead {
+  background-color: #0C7BFE;
+  opacity: 0.7;
+  color: white;
+}
+.table thead th {
+  border: none;
+  font-weight: 400;
+}
+
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  padding: 4px 0;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.42857;
+}
+mat-icon {
+  color: #0C7BFE;
+}
+.btn, .btn:hover, .btn:active, .btn:visited, .btn:focus{
+  background-color: white;
+  border: 2px solid;
+}
+.btn {
+  border-color: white;
+}
+.btn:hover {
+  border-color: #0C7BFE;
+}
+
+.btn-circle.btn-xl {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  float: right;
+  border-radius: 25px;
+  font-size: 24px;
+  line-height: 1.33;
+  border: 3px solid #0C7BFE;
+  opacity: 0.7;
+}
+.btn-circle.btn-xl:hover {
+  opacity: 1;
+}
+.one h3 {
+  line-height: unset;
+}
+.one {
+  align-content: baseline;
+  margin: 1em auto;
+}
+
+
+

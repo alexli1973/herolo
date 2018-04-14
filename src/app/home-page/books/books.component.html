@@ -1,0 +1,40 @@
+<div class="container one">
+  <div class="row">
+      <div class="col">
+        <h3>Book List</h3>
+      </div>
+
+      <div class="col">
+      <button type="button" class="btn btn-circle btn-xl" (click)="openDialogAdd()">
+        <mat-icon aria-label="add book">add</mat-icon>
+      </button>
+      </div>
+
+    </div>
+  </div>
+
+<div class="container" *ngIf="books">
+  <table class="table table-responsive-sm">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Book Title</th>
+      <th scope="col">Book Author</th>
+      <th scope="col">Date</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let b of newBookList; let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{b.title | titlecase | symbols}}</td>
+      <td>{{b.author | symbols}}</td>
+      <td>{{b.date | date}}</td>
+      <td><button type="button" class="btn btn-circle" (click)="openDialog(i)"><mat-icon>create</mat-icon></button></td>
+      <td><button type="button" class="btn btn-circle" (click)="promptWarning(i)"><mat-icon>delete_forever</mat-icon></button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
